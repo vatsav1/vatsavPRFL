@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srivatsav Yallapragada Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar at the top -->
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills Stack</a></li>
+        </ul>
+    </nav>
+
+    <!-- Full-page Header Section -->
+    <header id="top-section">
+        <div class="profile-info">
+            <div class="personal-details">
+                <h1>Srivatsav Yallapragada</h1>
+                <p>34 Duer Pl, Weehawken, New Jersey 07086</p>
+                <p>Phone: 201-850-2922</p>
+                <p>Email: <a href="mailto:srivatsavyallapragada@gmail.com">srivatsavyallapragada@gmail.com</a></p>
+                <p><a href="https://linkedin.com/in/srivatsav-yallapragada" target="_blank">LinkedIn Profile</a></p>
+                <button onclick="scrollToSections()">Explore My Portfolio</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content starts here -->
+    <div class="route-map">
+        <div id="summary" class="route-step">
+            <h2 onclick="toggleSection('summaryContent')">Summary</h2>
+            <div id="summaryContent" class="content">
+                <p>Data Analyst with three years of experience driving business insights, optimizing operations through data visualization, automation, and machine learning. Proven ability to translate complex data into actionable insights for informed decision-making. Skilled in Python, Java, SQL, and data visualization tools (Tableau, Power BI).</p>
+            </div>
+        </div>
+
+        <div id="education" class="route-step">
+            <h2 onclick="toggleSection('educationContent')">Education</h2>
+            <div id="educationContent" class="content">
+                <p><strong>New York Institute of Technology</strong> - MBA in Business Analytics (Sep 2023 - May 2025)</p>
+                <p>New York, New York</p>
+                <p><strong>Amrita University</strong> - Bachelor of Technology in Computer Science (Jul 2016 - Jul 2020)</p>
+                <p>Coimbatore, Tamil Nadu</p>
+            </div>
+        </div>
+
+        <div id="experience" class="route-step">
+            <h2 onclick="toggleSection('experienceContent')">Experience</h2>
+            <div id="experienceContent" class="content">
+                <div class="experience-item">
+                    <p><strong>Deloitte</strong> - Data Analyst (Jan 2022 - Jul 2023) <br> Hyderabad, Telangana</p>
+                    <ul>
+                        <li>Developed and presented 15+ interactive dashboards (Tableau, Excel) leading to a 40% increase in data transparency, 25% reduction in decision-making time, and a 25% increase in data-driven decision-making.</li>
+                        <li>Implemented functionalities with Coupa, Cospoint, resulting in a 25% increase in data retrieval efficiency and a 30% reduction in query response times.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <p><strong>Infosys</strong> - Systems Analyst (Jan 2020 - Nov 2021) <br> Hyderabad, Telangana</p>
+                    <ul>
+                        <li>Recommended strategic software enhancements that increased system performance by 20% and decreased server load by 35%.</li>
+                        <li>Demonstrated a 30% improvement in code efficiency and 15% reduction in database query time leveraging Core Java / SQL.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects" class="route-step">
+            <h2 onclick="toggleSection('projectsContent')">Projects & Certifications</h2>
+            <div id="projectsContent" class="content">
+                <p><strong>Google Data Analytics Certification</strong> | Jan 2024</p>
+                <p>Gained skills in data cleaning, analysis, and visualization using SQL, R, Tableau, PowerBi, and Spreadsheets.</p>
+                <p><strong>Analysis of CNN Architectures on Hand Gesture Identification</strong> | Apr 2020</p>
+                <p>Achieved a 72% accuracy rate in identifying Bharatanatyam mudras using convolutional neural networks.</p>
+                <p><strong>Classroom Attendance Monitoring</strong> | Nov 2019</p>
+                <p>Developed a system using MTCNN and ArcFace for automated attendance monitoring, improving recognition rates by 25%.</p>
+            </div>
+        </div>
+
+        <div id="skills" class="route-step">
+            <h2 onclick="toggleSection('skillsContent')">Skills Stack</h2>
+            <div id="skillsContent" class="content">
+                <p><strong>Languages:</strong> Python, Java, C, HTML/CSS, JavaScript, SQL</p>
+                <p><strong>Developer Tools:</strong> Tableau, PowerBi, Advanced Excel, Power Query, MySQL, Big Query</p>
+                <p><strong>Other Skills:</strong> Data Analysis, Data Management, Data Visualization, Big Data, Statistics, Business Analysis</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            var content = document.getElementById(sectionId);
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Smooth scroll from the button in the header to the rest of the sections
+        function scrollToSections() {
+            document.querySelector('.route-map').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
